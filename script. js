@@ -1,0 +1,22 @@
+ Wait for the DOM to fully load
+document.addEventListener("DOMContentLoaded", () => {
+    // Example: Button click event
+    const button = document.getElementById("submitBtn");
+    button.addEventListener("click", () => {
+        const name = document.getElementById("nameInput").value;
+        if (name.trim() === "") {
+            alert("Please enter your name.");
+        } else {
+            alert(`Hello, ${name}!`);
+        }
+    });
+
+    // Example: Toggle dark mode
+    const toggle = document.getElementById("darkModeToggle");
+    toggle.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+    });
+
+    // Example: Log current date and time
+    console.log("Page loaded at:", new Date().toLocaleString());
+});
